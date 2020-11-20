@@ -13,6 +13,13 @@
 import * as firebase from 'firebase';
 import 'firebase/auth';
 export default {
+
+  created(){
+    firebase.default.auth().onAuthStateChanged(user=>{
+      this.isLoggedIn = !!user;
+    })
+  },
+
   data(){
     return{
       isLoggedIn:false
