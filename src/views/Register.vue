@@ -1,10 +1,35 @@
 <template>
-  <div>Register</div>
+  <div>
+    <div v-if="error" class="error">{{error.message}}</div>
+    <form @submit.prevent="pressed">
+      Register
+      <div class="email">
+        <input type="email" v-model="email" placeholder="email"/>
+      </div>
+      <div class="password">
+        <input type="password" v-model="password" placeholder="password"/>
+      </div>
+      <button type="submit">Register</button>
+    </form>
+  </div>
 </template>
 
 <script>
 export default {
 
+  methods:{
+    pressed(){
+      alert("Submitted")
+    }
+  },
+
+  data(){
+    return{
+      email:'',
+      password:'',
+      error:''
+    }
+  }
 }
 </script>
 
