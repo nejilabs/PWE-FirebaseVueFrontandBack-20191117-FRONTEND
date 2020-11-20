@@ -15,11 +15,23 @@
 </template>
 
 <script>
-export default {
+//imports 
+import * as firebase from 'firebase'; //1643
+import 'firebase/auth'; //1643
 
+export default {
   methods:{
-    pressed(){
-      alert("Submitted")
+    async pressed(){
+      try {
+        const user = firebase.default.auth().createUserWithEmailAndPassword(this.email,this.password);
+        console.log(user);
+        this.$router.replace({name:"Secret"});
+      } catch(err){
+        console.log(err)
+      }
+    
+
+
     }
   },
 
