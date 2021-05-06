@@ -4,6 +4,8 @@
 
 Link: https://www.youtube.com/playlist?list=PL-lxoPS_1OXVZCIqgWqxy-Bh711CCtbyw
 
+Description: This repository holds the frontend of the application for PWE-FirebaseVueFrontandBack-20191117
+
 ## Project setup
 ```
 npm install
